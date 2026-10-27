@@ -1,5 +1,3 @@
-
-
 public class PPAP{
 	public static String pap(String str){
 		String str1 = "";
@@ -24,8 +22,8 @@ public class PPAP{
 	public static String cap(String str){
 		String ret = "";
 		ret+= str.charAt(1);
-		ret.toUpperCase();
-		//ret+=str.substring(1);
+		ret = ret.toUpperCase();
+		ret+= str.substring(2);
 		return ret;
 		
 	}
@@ -33,7 +31,7 @@ public class PPAP{
 		String word = "I have a maggie, I have a downs";
 		System.out.println(word);
 		
-		System.out.print("uh!" + pap(word));
+		System.out.print("uh! " + pap(word));
 	
 	
 	}
