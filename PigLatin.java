@@ -2,9 +2,19 @@ public class PigLatin{
 	public static String pigLatin (String str){
 		String res = "";
 		String test = "";
+		str += " ";
 		for(int i = 0; i<str.length(); i++){
 			if(str.indexOf(' ')<0){
 				res = atinlayIgpay(str);
+			}
+			else{
+				
+				while (str.indexOf(' ',i)>i){
+					test+= str.charAt(i);
+					i++;
+				}
+				res += " " + atinlayIgpay(test);
+				test = "";
 			}
 			
 		}
@@ -21,7 +31,7 @@ public class PigLatin{
 		return res;
 	}
 	public static void main (String[] args){
-		String word = "car";
+		String word = "i love cars";
 		System.out.println(word);
 		System.out.println(pigLatin(word));
 	
